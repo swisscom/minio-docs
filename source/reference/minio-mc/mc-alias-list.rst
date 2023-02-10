@@ -43,7 +43,9 @@ to each alias.
 
       .. code-block:: shell
 
-         mc [GLOBALFLAGS] alias list [ALIAS]
+         mc [GLOBALFLAGS] alias list 
+                                [--details] \
+                                [ALIAS]
 
       .. include:: /includes/common-minio-mc.rst
          :start-after: start-minio-syntax
@@ -55,6 +57,10 @@ Parameters
 .. mc-cmd:: ALIAS
 
    *Optional* The name of a specific alias to display.
+
+.. mc-cmd:: --details
+
+   *Optional* Show redacted details.
 
 Global Flags
 ~~~~~~~~~~~~
@@ -87,6 +93,29 @@ List All Configured Aliases
          :class: copyable
 
          mc alias list
+
+List All Configured Aliases And Show Redacted Details
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. tab-set::
+
+   .. tab-item:: Example
+
+      The following :mc:`mc alias list --details` command lists all configured aliases
+      in the local :program:`mc` configuration with revealing all redacted details. 
+
+      .. code-block:: shell
+         :class: copyable
+
+         mc alias list --details
+
+   .. tab-item:: Syntax
+
+      .. code-block:: shell
+         :class: copyable
+
+         mc alias list --details
+
 
 List a Specific Alias
 ~~~~~~~~~~~~~~~~~~~~~
